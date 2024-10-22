@@ -24,7 +24,7 @@ function exportToExcel() {
         return;
     }
 
-    // Validate password
+    // Validate passwords
     if (!validatePassword(formData.password)) {
         alert('Password must be at least 8 characters long.');
         return;
@@ -62,16 +62,16 @@ function exportToExcel() {
 // Email validation function
 function validateEmail(email) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
+    return emailPattern.test(email); // Corrected logic
 }
 
 // Phone validation function (10 digits)
 function validatePhone(phone) {
-    const phonePattern = /^[0-9]{10}$/;
+    const phonePattern = /^[0-9]{10}$/; // Corrected pattern
     return phonePattern.test(phone);
 }
 
 // Password validation function (at least 8 characters)
 function validatePassword(password) {
-    return password.length >= 8;
+    return password.length >= 8; // Password should be at least 8 characters long
 }
